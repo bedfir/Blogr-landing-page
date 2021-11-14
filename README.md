@@ -1,4 +1,4 @@
-# Frontend Mentor - Blogr Responsive Grid Header
+# Only Blogr Header - Responsive Grid Header
 
 ## Table of contents
 
