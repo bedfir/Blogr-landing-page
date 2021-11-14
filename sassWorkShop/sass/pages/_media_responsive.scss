@@ -1,0 +1,179 @@
+/********************* RESPONSIVE HEADER  **********************/
+.header {
+  @include respond(tablet) {
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2em;
+    background-size: 250%;
+  }
+
+  @include respond(phone) {
+    // display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 1fr 1.5fr;
+    grid-template-areas:
+      "header__img"
+      "header__title"
+      "header__dtn";
+    background-position: center;
+    background-size: 250%;
+  }
+}
+
+// ---------- LOGO / HUMBURGER
+@include respond(phone) {
+  .header__img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__img__log {
+    img {
+      width: 85%;
+    }
+  }
+  .header__img__icon {
+    margin-top: 0.5em;
+    height: 1em;
+    display: block;
+  }
+}
+@include respond(smallphone) {
+  .header__title__content {
+    font-size: 4em;
+  }
+}
+
+// ------------ VERTICAL DROPDOWN MENU
+.header__nav {
+  @include respond(tablet) {
+    font-size: 0.68em;
+    margin-top: 1em;
+  }
+  @include respond(phone) {
+    display: none;
+    position: absolute;
+    top: 6em;
+    background-color: var(--White);
+    border-radius: 0.5em;
+    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+    grid-template-columns: 80%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "header__nav__wrapper"
+      "header__nav__ctn";
+  }
+}
+
+.header__nav__wrapper {
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+    a {
+      color: var(--Very-dark-blue);
+    }
+  }
+}
+
+.header__nav__wrapper__items {
+  @include respond(phone) {
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.header__nav__wrapper__items__heading {
+  @include respond(phone) {
+    text-decoration: none;
+  }
+}
+
+.header__nav__wrapper__items__submenu {
+  @include respond(phone) {
+    position: initial;
+    align-items: center;
+    width: 100%;
+    transform: unset;
+    background-color: var(--bg-submenu);
+  }
+}
+
+.header__nav__ctn {
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: start;
+
+    gap: 2em;
+  }
+}
+
+.header__nav__ctn__btns {
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header__nav__ctn__btns__log {
+  @include respond(phone) {
+    color: var(--Very-dark-blue);
+  }
+}
+
+.header__nav__ctn__btns__sign {
+  @include respond(phone) {
+    color: var(--White);
+    background-image: linear-gradient(
+      135deg,
+      var(--Very-light-red),
+      var(--Light-red)
+    );
+    &:hover {
+      background-color: var(--White);
+      color: var(--Light-red);
+    }
+  }
+}
+
+.header__nav__ctn__line {
+  @include respond(phone) {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bg-submenu);
+  }
+}
+
+// ------------ TITLE / DISCRIPTION
+.header__title {
+  @include respond(tablet) {
+    text-align: center;
+    font-size: 1em;
+  }
+  @include respond(phone) {
+    font-size: 0.4375em;
+
+    &__disc {
+      font-size: 2.5em;
+    }
+  }
+}
+
+// ----------- BUTTONS DOC
+.header__dtn {
+  @include respond(tablet) {
+    font-size: 1em;
+  }
+
+  @include respond(phone) {
+    font-size: 0.8em;
+  }
+  @include respond(smallphone) {
+    font-size: 0.7em;
+  }
+}
