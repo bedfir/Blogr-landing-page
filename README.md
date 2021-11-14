@@ -16,7 +16,7 @@
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://blogr-bf.netlify.app/)
+- Live Site URL: [Live site Responsive Grid Header](https://blogr-bf.netlify.app/)
 
 ## My process
 
